@@ -315,6 +315,169 @@ por lo anterior debe existir 2 nodos, Pruebas y Producción, para el caso de des
 
 <!-- Fin de viewpoint Fisica -->
 
+<!-- Inicio de viewpoint logico -->
+
+## Logic viewpoint <a name="logical-viewpoint"></a>
+
+El viewpoint logico describe la estructura y funcionalidad que el sistema proporciona a los usuarios finales,  los requerimientos y preocupaciones del equipo comercial (vendedores), el equipo de mercadeo(Profesional de mercadeo) y al cliente final, en esta apartado encontrará los concerns que enmarcan el punto de Vista, los tipos de modelos incluidos y convenciones que permiten un mejor entendimiento de la información que se presenta.
+
+## Overview <a name="overview-logical"></a>
+
+El viewpoint logico se utiliza para describir la relacion e interaccion entre los diferentes entes que intervienen en el proceso. 
+
+## Framed concerns and typical stakeholders <a name="framed-concerns-and-typical-stakeholders-logical"></a>
+
+El equipo de arquitectura asume la importancia de identificar las preocupaciones de Stakeholders y sus preocupaciones, por cuanto esto hace parte del análisis que permitirá abordar sus intereses y presentar una solución adecuada desde el punto de vista Logica, de tal forma que fuese posible tomar las decisiones necesarias y de esta manera ofrecer la solución que cubra las expectativas de los interesados.
+
+### Concerns <a name="concerns-logical"></a>
+
+A continuación se describe cada preocupación de las partes interesadas relacionadas con el Viewpoint Logico, las preocupaciones identificadas en esta sección son información esencial para el arquitecto ya que le ayudan a identificar las partes invlolucradas y su interaccion.
+
+* [CNR-001](#CNR-001) - Usabilidad:  Se busca contar con herramientas de vanguardia que ofrezca una buena experiencia de usuario, se encuentra asociada al equipo comercial quienes buscan una herramienta que les brinde agilidad en sus procesos y que permitan capturar al cliente en una experiencia agil y sencialla.
+
+* [CNR-002](#CNR-002) - Availability "Disponibilidad": Que el sistema sea accesible dentro y fuera de las instalaciones de la compañía, el equipo comercial busca una herramienta que le permita presentar su catalogo comercial en el momento en que el o su cliente lo requieran sin importar el tipo de dispositivo desde el que se quiera presentar.
+
+* [CNR-005](#CNR-005) - Modificabilidad: La modificabilidad se refiere al grado en que un sistema puede ser modificado efectiva o eficientemente sin introducir defectos o degradar la calidad del sistema existente, la herramienta desarrollada debe ser entendible para el equipo de mercadeo, al momento de crear modificar o gestionar catalogos de productos permitiendole manejar variedad de atributos sin requerir mayor esfuerzo.
+
+* [CNR-006](#CNR-006) - Rendimiento: Desempeño del aplicativo, para la empresa es importante ampliar sus posibilidades de consulta y procesamiento de datos, para la aplicacion el cfecimiento exponencial de la data respecto a productos, pedidos o clientes no debe representar un riesgo en la agilidad ni en su renderizado.  
+
+### Typical stakeholders <a name="typical-stakeholders-development"></a>
+
+Las partes interesadas para esta vista incluye a los integrantes del equipo de desarrollo responsables de la construcción de software y sus descripciones Una vez revisada la tabla No 1, se identifican 3 Stakeholders para el viewpoint logico.
+
+* [STK-002](#STK-002) - Equipo comercial: Personal que apoya el proceso de ventas
+* [STK-003](#STK-003) - Equipo de mercadeo: Personal encargado de definir estrategias de mercadeo y diseño de catálogos
+
+Tabla No 4 Catálogo de Stakeholder Viewpoint de Desarrollo
+
+## Model kinds+ <a name="model-kinds-development"></a>
+
+* [MOD-003](#MOD-003) - Modelo de Clases
+* [MOD-005](#MOD-005) - Modelo de secuencia
+
+__Subset of metamodel elements__
+
+* Clases
+* Relaciónes
+* Objetos
+* Casillas de activacion
+* Actores
+* Pauqetes
+* Linea de vida
+* Simbolos
+
+
+## Class model <a name="class-model"></a>
+
+En esta sección se describe el diagrama de clases que será empleado para describir la solución propuesta para la empresa K.
+
+### Class model conventions <a name="class-model-conventions"></a>
+
+El diagrama de clases empleado para describir la vista de desarrollo está formado por dos elementos: Clases y Relaciónes.
+
+__Clases:__ Representa una entidad del sistema, se grafica como un rectángulo con un rectángulo dividido en tres partes, a superior contiene el nombre de la clase, la central contiene los atributos y la inferior las acciones.
+
+![alt text][figNL1-vp]
+
+Figura NL1: Clase
+
+__Relaciones:__ Las relaciones representan algun dipo de dependencia o relacion entre clases, se diferencian pos la forma de sus flechas.
+
+__Composicion:__ Es un tipo especial de agregación que denota una fuerte posesión de la Clase “Todo”, a la Clase “Parte”. Se grafica con un rombo diamante relleno contra la clase que representa el todo.
+
+![alt text][figNL2-vp]
+
+Figura NL2: Composicion
+
+__Agregacion:__ Es una relación en la que la Clase “Todo” juega un rol más importante que la Clase "Parte", pero las dos clases no son dependientes una de otra. Se grafica con un rombo diamante vacío contra la Clase “Todo”.
+
+![alt text][figNL3-vp]
+
+Figura NL3: Agregacion
+
+__Herencia:__ Se refiere a una relación entre dos clases en donde una Clase “Específica” es una versión especializada de la otra, o Clase “General”.
+
+![alt text][figNL4-vp]
+
+Figura NL4: Herencia
+
+__Dependencia:__ Representa un tipo de relación en la que una clase es instanciada.
+
+![alt text][figNL5-vp]
+
+Figura NL5: Dependencia
+
+## Sequence model <a name="sequence-model"></a>
+
+Mediante el uso de estos diagramas se espera mostrar por de una linea de vida el estado del proceso, la linea de vida y mensajes intercambiados entre ellos, pretende presentar una visión más clara del sistema de información de la empresa K,   organizado en subsistemas y agrupando elementos para su análisis y mejor entendimiento así mismo se construyen dependencias entre paquetes, siendo una extensión del diagrama de clases y de componentes, la idea principal del diagrama es poder planificar y comprender la funcion detallada de un escenario.
+
+### Sequence model conventions <a name="sequence-model-conventions"></a>
+
+__Objetos:__ Representa una clase u objeto en UML. El símbolo objeto demuestra cómo se comportará un objeto en el contexto del sistema. Los atributos de las clases no deben aparecer en esta figura.
+
+![alt text][figNL6-vp]
+
+Figura NL6: Objeto
+
+__Casilla de activacion:__ Representa el tiempo necesario para que un objeto finalice una tarea. Cuanto más tiempo lleve la tarea, más larga será la casilla de activación.
+
+![alt text][figNL7-vp]
+
+Figura NL7: Casilla de activacion
+
+__Actor:__ Muestra entidades que interactúan con el sistema o que son externas al sistema.
+
+![alt text][figNL8-vp]
+
+Figura NL8: Actor
+
+__Linea de vida:__ Representa el paso del tiempo a medida que se extiende hacia abajo. Esta línea vertical discontinua representa eventos secuenciales que le ocurren a un objeto durante el proceso graficado. Las líneas de vida pueden comenzar con una figura rectangular etiquetada o un símbolo de actor.
+
+![alt text][figNL9-vp]
+
+Figura NL9: Linea de vida
+
+__Simbolos:__ Usa los siguientes símbolos de mensaje y flechas para indicar cómo se transmite la información entre objetos. Estos símbolos pueden reflejar el inicio y la ejecución de una operación o el envío y la recepción de una señal.
+
+__Sincrónico:__ Este símbolo se utiliza cuando un remitente debe esperar una respuesta a un mensaje antes de proseguir. El diagrama debe mostrar el mensaje y la respuesta.
+
+![alt text][figNL10-vp]
+
+Figura NL10: Símbolo de mensaje sincrónico
+
+
+
+## Operations on views+ <a name="operations-on-views-logical"></a>
+
+Operations define the methods to be applied to views and their models. Types of operations include:
+
+* __Construction method:__ Este tipo de modelos se construye implementando clases relacionanda que representan entidades o stakeholders del proceso, los cuales tener caracteristicas basicas que los identifiquen junto con metodos u acciones que me permitar trasar una ruta interactiva entre las diferentes clases llevar un estereotipo que los identifique, cada componente dentro del diagrama puede contener clases e interfaces.
+
+  De la misma manera pueden interactuar en el diagrama de seguencia ya identificando que clases u objetos intractuan con otros. 
+
+  Existe una interaccion entre minimo dos clases u objetos donde un objeto hace una peticion y de alguna manera obtiene una respuesta de vuelta.. 
+
+* __Analysis method:__ Para el arquitecto, el equipo y demas stakeholders que intervienen en este viewpoint el diagrama de clases y secuencias les permite visualizar de manera comprencible la forma en que los diferentes componentes, objetos u clases se comunicaran, ademas podran ver el flujo que trasa dichas interacciones.
+
+Para el caso de los comerciales y profesionales de mercadeo, los diagramas les permiten ver la trasa de las actividades que tiene el proceso permitiendo identificar las responsabilidades de sus alternos.
+
+## Correspondence rules <a name="correspondence-rules-logical"></a>
+
+* R1: Los módulos presentados en el diagrama de componentes serán desplegados en nodos del diagrama de despliegue.
+por lo anterior debe existir 2 nodos, Pruebas y Producción, para el caso de desarrollo corresponde al ambiente local de los programadores, pruebas será desplegado de manera independiente a producción, y si y sólo si sera puesto en producción aquellos componentes y/o paquetes que han sido probados por desarrolladores, testers y usuarios finales.
+
+* R2: Las bases de datos estarán en 2 nodos, manejando dos ambientes producción y para el caso de desarrollo y pruebas la base de datos sera compartida.
+
+* R3: Debe existir un solo repositorio para el versionamiento del código el cual será  desplegado en un nodo descrito en el diagrama de despliegue.
+
+* R4: Las interacciones identificadas en el diagrama de clases representan las relaciones y acciones que se representan en el diagrama de secuencia
+
+## Sources <a name="sources-logical"></a>
+
+[Table of contents](#table-of-contents-vp)
+
+<!-- Fin de viewpoint logico -->
+
 [fig1]: /img/fig1-vp.png "Componente"
 [fig2]: /img/fig2-vp.png "Interfaz"
 [fig3]: /img/fig3-vp.png "Relación de dependencia"
@@ -326,5 +489,16 @@ por lo anterior debe existir 2 nodos, Pruebas y Producción, para el caso de des
 [fig9]: /img/fig9-vp.png "Dependencia"
 [fig10]: /img/fig10-vp.png "Interfaz"
 [fig11]: /img/fig11-vp.png "Nodo"
-[fig12]: /img/fig12-vp.png "Estereotipo"
+[figNL1-vp]: /img/figNL1-vp.png "Clase"
+[figNL2-vp]: /img/figNL2-vp.png "Composición"
+[figNL3-vp]: /img/figNL3-vp.png "Agregación"
+[figNL4-vp]: /img/figNL4-vp.png "Herencia"
+[figNL5-vp]: /img/figNL5-vp.png "Dependencia"
+[figNL6-vp]: /img/figNL6-vp.png "Objeto"
+[figNL7-vp]: /img/figNL7-vp.png "Casilla de activacion"
+[figNL8-vp]: /img/figNL8-vp.png "Actor"
+[figNL9-vp]: /img/figNL9-vp.png "Linea de vida"
+[figNL10-vp]: /img/figNL10-vp.png "Símbolo de mensaje sincrónico"
+
+
 
