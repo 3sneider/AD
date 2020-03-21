@@ -339,7 +339,7 @@ A continuación se describe cada preocupación de las partes interesadas relacio
 
 * [CNR-005](#CNR-005) - Modificabilidad: La modificabilidad se refiere al grado en que un sistema puede ser modificado efectiva o eficientemente sin introducir defectos o degradar la calidad del sistema existente, la herramienta desarrollada debe ser entendible para el equipo de mercadeo, al momento de crear modificar o gestionar catalogos de productos permitiendole manejar variedad de atributos sin requerir mayor esfuerzo.
 
-* [CNR-006](#CNR-006) - Rendimiento: Desempeño del aplicativo, para la empresa es importante ampliar sus posibilidades de consulta y procesamiento de datos, para la aplicacion el cfecimiento exponencial de la data respecto a productos, pedidos o clientes no debe representar un riesgo en la agilidad ni en su renderizado.  
+* [CNR-006](#CNR-006) - Rendimiento: Desempeño del aplicativo, para la empresa es importante ampliar sus posibilidades de consulta y procesamiento de datos, para la aplicacion el crecimiento exponencial de la data respecto a productos, pedidos o clientes no debe representar un riesgo en la agilidad ni en su renderizado.  
 
 ### Typical stakeholders <a name="typical-stakeholders-development"></a>
 
@@ -381,7 +381,7 @@ __Clases:__ Representa una entidad del sistema, se grafica como un rectángulo c
 
 Figura NL1: Clase
 
-__Relaciones:__ Las relaciones representan algun dipo de dependencia o relacion entre clases, se diferencian pos la forma de sus flechas.
+__Relaciones:__ Las relaciones representan algun tipo de dependencia o relacion entre clases, se diferencian pos la forma de sus flechas.
 
 __Composicion:__ Es un tipo especial de agregación que denota una fuerte posesión de la Clase “Todo”, a la Clase “Parte”. Se grafica con un rombo diamante relleno contra la clase que representa el todo.
 
@@ -409,7 +409,7 @@ Figura NL5: Dependencia
 
 ## Sequence model <a name="sequence-model"></a>
 
-Mediante el uso de estos diagramas se espera mostrar por de una linea de vida el estado del proceso, la linea de vida y mensajes intercambiados entre ellos, pretende presentar una visión más clara del sistema de información de la empresa K,   organizado en subsistemas y agrupando elementos para su análisis y mejor entendimiento así mismo se construyen dependencias entre paquetes, siendo una extensión del diagrama de clases y de componentes, la idea principal del diagrama es poder planificar y comprender la funcion detallada de un escenario.
+Mediante el uso de estos diagramas se espera mostrar en una linea de vida el estado del proceso, la linea de vida y mensajes intercambiados entre ellos, pretende presentar una visión más clara del sistema de información de la empresa K,   organizado en subsistemas y agrupando elementos para su análisis y mejor entendimiento así mismo se construyen dependencias entre paquetes, siendo una extensión del diagrama de clases y de componentes, la idea principal del diagrama es poder planificar y comprender la funcion detallada de un escenario.
 
 ### Sequence model conventions <a name="sequence-model-conventions"></a>
 
